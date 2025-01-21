@@ -5,7 +5,7 @@ const Header = async () => {
   const { common: t } = await getDictionary()
   return (
     <>
-      <header className='fixed top-0 left-0 right-0 z-50 py-2 bg-secondary'>
+      <header className='fixed top-0 left-0 right-0 z-50 py-2 bg-secondary select-none'>
         <div className='grid grid-cols-3'>
           <div />
           <div className='flex justify-center items-center'>
