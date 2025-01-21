@@ -11,7 +11,7 @@ const IndexNav = ({ items }: Props) => {
   return (
     <nav className='px-8 flex flex-wrap justify-center space-x-4'>
       {items.map((item) => (
-        <a key={item} href={`#${item}`} className='text-primary text-sm'>
+        <a key={item} href={`#${item}`} className='text-secondary text-sm'>
           {item}
         </a>
       ))}

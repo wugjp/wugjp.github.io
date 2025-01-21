@@ -7,9 +7,14 @@
   },
   "home": {
     "title": "わぐらぶ",
-    "description": "Wake Up, Girls！データサイト（非公式）",
-    "songs": "楽曲一覧",
-    "costumes": "衣装一覧"
+    "description": "Wake Up, Girls！非公式データサイト",
+    "songs": "楽曲",
+    "records": "レコード",
+    "artists": "アーティスト",
+    "youtube": "YouTube",
+    "costumes": "衣装",
+    "events": "イベント",
+    "articles": "記事"
   },
   "songs": {
     "title": "Wake Up, Girls！楽曲一覧",

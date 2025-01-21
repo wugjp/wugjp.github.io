@@ -17,7 +17,7 @@ const getMetadata = async (title?: string, description?: string, thumbnailUrl?: 
     },
     icons: {
       icon: '/favicon.ico',
-      apple: './300x300.png',
+      apple: './icon-256x256.png',
     },
     metadataBase: new URL(currentBaseUrl),
     openGraph: {
@@ -28,9 +28,9 @@ const getMetadata = async (title?: string, description?: string, thumbnailUrl?: 
       type: 'website',
       images: [
         {
-          url: thumbnailUrl || `${currentBaseUrl}/300x300.png`,
-          width: 300,
-          height: 300,
+          url: thumbnailUrl || `${currentBaseUrl}/icon-256x256.png`,
+          width: 256,
+          height: 256,
         },
       ],
     },
@@ -38,7 +38,7 @@ const getMetadata = async (title?: string, description?: string, thumbnailUrl?: 
       title: title || t.title,
       description: description || t.description,
       creator: '@gomi_ningen',
-      images: [thumbnailUrl || `${currentBaseUrl}/300x300.png`],
+      images: [thumbnailUrl || `${currentBaseUrl}/icon-256x256.png`],
       card: 'summary',
     },
   }

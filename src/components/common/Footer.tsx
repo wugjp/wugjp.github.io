@@ -10,11 +10,6 @@ const Footer = async () => {
           {common.title}
         </Link>
       </div>
-      <div className=''>
-        <Link href='/' className='text-xs text-gray-500'>
-          wugjp.github.io
-        </Link>
-      </div>
     </footer>
   )
 }

@@ -9,7 +9,10 @@ const Header = async () => {
         <div className='grid grid-cols-3'>
           <div />
           <div className='flex justify-center items-center'>
-            <Link href='/'>{t.title}</Link>
+            <Link href='/'>
+              {/* eslint-disable-next-line @next/next/no-img-element */}
+              <img src='/logo.png' alt={t.title} width={204} height={33} />
+            </Link>
           </div>
         </div>
       </header>

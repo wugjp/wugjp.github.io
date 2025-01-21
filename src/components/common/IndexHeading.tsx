@@ -7,7 +7,7 @@ const IndexHeading = ({ id }: Props) => {
     <></>
   ) : (
     <div className='relative'>
-      <div className='py-4 text-left text-primary font-semibold'>{id}</div>
+      <div className='py-4 text-left text-secondary font-semibold'>{id}</div>
       <div id={id} className='absolute -top-12' />
     </div>
   )
