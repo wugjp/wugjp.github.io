@@ -1,8 +1,8 @@
-import { Costume } from '@prisma/client'
+import { listCostumes } from '@/actions/costume'
 import CostumeItem from './CostumeItem'
 
 interface Props {
-  costumes: Costume[]
+  costumes: Awaited<ReturnType<typeof listCostumes>>
 }
 
 const CostumeCollection = ({ costumes }: Props) => {
