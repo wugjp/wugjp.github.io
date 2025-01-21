@@ -1,0 +1,20 @@
+{
+  "common": {
+    "title": "わぐらぶ",
+    "description": "Wake Up, Girls！データサイト（非公式）",
+    "signin": "ログイン",
+    "signout": "ログアウト"
+  },
+  "home": {
+    "title": "わぐらぶ",
+    "description": "Wake Up, Girls！データサイト（非公式）",
+    "costumes": "衣装一覧"
+  },
+  "costumes": {
+    "title": "Wake Up, Girls！衣装一覧",
+    "description": "Wake Up, Girls！の衣装一覧です",
+    "official": "公式",
+    "unofficial": "非公式",
+    "costumeNameType": "衣装呼称タイプ"
+  }
+}

@@ -1,0 +1,33 @@
+generator client {
+  provider = "prisma-client-js"
+}
+
+datasource db {
+  provider = "sqlite"
+  url      = env("DATABASE_URL")
+}
+
+model Costume {
+  id             Int            @id @default(autoincrement())
+  displayOrder   Int
+  name           String
+  nameEn         String
+  isOfficialName Boolean        @default(false)
+  debutEventId   Int?
+  artistId       Int?
+  note           String?
+  images         CostumeImage[]
+}
+
+model CostumeImage {
+  id           Int     @id @default(autoincrement())
+  costumeId    Int
+  displayOrder Int
+  imageKey     String
+  creditName   String
+  creditUrl    String
+  description  String
+  costume      Costume @relation(fields: [costumeId], references: [id], onDelete: NoAction, onUpdate: NoAction)
+
+  @@index([costumeId], map: "costume_id")
+}
