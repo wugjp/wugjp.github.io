@@ -8,7 +8,14 @@
   "home": {
     "title": "わぐらぶ",
     "description": "Wake Up, Girls！データサイト（非公式）",
+    "songs": "楽曲一覧",
     "costumes": "衣装一覧"
+  },
+  "songs": {
+    "title": "Wake Up, Girls！楽曲一覧",
+    "description": "Wake Up, Girls！の楽曲一覧です",
+    "jasracCode": "JASRACコード",
+    "iswcCode": "ISWCコード"
   },
   "costumes": {
     "title": "Wake Up, Girls！衣装一覧",

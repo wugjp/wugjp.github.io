@@ -7,7 +7,14 @@ export default async function Home() {
   return (
     <Container className='max-w-screen-sm text-center px-8 md:px-2'>
       <div className='px-0 sm:px-8'>
-        <MenuSection title={t.title} description={t.description} items={[{ icon: '👗', name: t.costumes, href: '/costumes' }]} />
+        <MenuSection
+          title={t.title}
+          description={t.description}
+          items={[
+            { icon: '🎵', name: t.songs, href: '/songs' },
+            { icon: '👗', name: t.costumes, href: '/costumes' },
+          ]}
+        />
       </div>
     </Container>
   )
