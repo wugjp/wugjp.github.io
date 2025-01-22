@@ -42,3 +42,17 @@ export const listCostumes = unstable_cache(
   undefined,
   { tags: [CacheTag('Costumes')] }
 )
+
+export const listCostumeTweets = unstable_cache(
+  async (costumeId: number) =>
+    prisma.costumeTweet.findMany({
+      where: {
+        costumeId,
+      },
+      orderBy: {
+        tweetId: 'asc',
+      },
+    }),
+  undefined,
+  { tags: [CacheTag('Costumes')] }
+)

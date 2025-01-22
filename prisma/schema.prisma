@@ -32,6 +32,12 @@ model CostumeImage {
   @@index([costumeId], map: "costume_id")
 }
 
+model CostumeTweet {
+  id        Int    @id @default(autoincrement())
+  costumeId Int
+  tweetId   String
+}
+
 model Song {
   id           Int     @id @default(autoincrement())
   title        String
