@@ -31,5 +31,11 @@
     "photoBy": "写真提供:",
     "san": "さん",
     "relatedTweets": "関連ツイート"
+  },
+  "youtube": {
+    "title": "YouTube動画一覧",
+    "description": "Wake Up, Girls！のYouTube動画一覧です",
+    "channel": "チャンネル",
+    "fVideoList": "「%s」の動画一覧"
   }
 }

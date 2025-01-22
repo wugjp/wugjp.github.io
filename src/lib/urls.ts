@@ -6,4 +6,6 @@ export const Urls = {
     const base = 'https://pub-00d47032df24418cb7d9542664460c75.r2.dev'
     return key ? `${base}/${key}` : Urls.noImage
   },
+  youtubeVideo: (videoId: string) => `https://www.youtube.com/watch?v=${videoId}`,
+  youtubeThumbnail: (videoId: string | undefined | null) => (videoId ? `https://img.youtube.com/vi/${videoId}/mqdefault.jpg` : undefined),
 }

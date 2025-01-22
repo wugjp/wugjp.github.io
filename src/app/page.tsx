@@ -14,7 +14,7 @@ export default async function Home() {
             { icon: '🎵', name: t.songs, href: '/songs' },
             { icon: '💿', name: t.records, href: '/records', enabled: false },
             { icon: '👤', name: t.artists, href: '/artists', enabled: false },
-            { icon: '🎬', name: t.youtube, href: '/youtube', enabled: false },
+            { icon: '🎬', name: t.youtube, href: '/youtube' },
             { icon: '👗', name: t.costumes, href: '/costumes' },
             { icon: '🗓️', name: t.events, href: 'https://www.eventernote.com/actors/6988/events' },
             { icon: '📝', name: t.articles, href: '/articles', enabled: false },

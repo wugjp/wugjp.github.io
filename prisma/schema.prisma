@@ -47,3 +47,16 @@ model Song {
   iswcCode     String?
   thumbnailUrl String?
 }
+
+model YouTubeChannel {
+  id           String @id
+  title        String
+  displayOrder Int
+}
+
+model YouTubeVideo {
+  id                 String @id
+  publishedTimestamp Int
+  channelId          String
+  title              String
+}
