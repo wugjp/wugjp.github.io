@@ -29,7 +29,7 @@ export const generateMetadata = async ({ params }: Props): Promise<Metadata | nu
     const title = `${isDefaultLocale ? costume.name : costume.nameEn} - ${t.title}`
     const description = t.description
     const imageKey = costume.images[0]?.imageKey
-    const key = imageKey ? encodeURIComponent(`costumes/${imageKey}.s.png`) : undefined
+    const key = imageKey ? `${imageKey}.240.png` : undefined
     const thumbnailUrl = Urls.file(key)
     const meta = await getMetadata(title, description, thumbnailUrl)
     return meta
