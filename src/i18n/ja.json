@@ -27,6 +27,8 @@
     "description": "Wake Up, Girls！の衣装一覧です",
     "official": "公式",
     "unofficial": "非公式",
-    "costumeNameType": "衣装呼称タイプ"
+    "costumeNameType": "衣装呼称タイプ",
+    "photoBy": "写真提供:",
+    "san": "さん"
   }
 }

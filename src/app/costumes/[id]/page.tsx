@@ -2,6 +2,7 @@ import { getCostume, listCostumes } from '@/actions/costume'
 import Breadcrumbs from '@/components/common/Breadcrumbs'
 import Container from '@/components/common/Container'
 import getMetadata from '@/components/common/Meta'
+import CostumeDetailImagesWrapper from '@/components/costumes/CostumeDetailImagesWrapper'
 import CostumeMetadata from '@/components/costumes/CostumeMetadata'
 import { isDefaultLocale } from '@/i18n/config'
 import { getDictionary } from '@/i18n/dictionaries'
@@ -57,6 +58,9 @@ const Costume = async ({ params }: Props) => {
         <div className='grid grid-cols-1 md:grid-cols-2 gap-4 py-8'>
           <div className='xs:block md:hidden'>
             <CostumeMetadata costume={costume} />
+          </div>
+          <div>
+            <CostumeDetailImagesWrapper costume={costume} />
           </div>
           <div className='hidden md:block'>
             <CostumeMetadata costume={costume} />
