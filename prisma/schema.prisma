@@ -33,11 +33,11 @@ model CostumeImage {
 }
 
 model Song {
-  id                  Int                   @id @default(autoincrement())
-  title               String
-  kana                String
-  titleEn             String
-  jasracCode         String?
-  iswcCode           String?
-  thumbnailUrl       String?
+  id           Int     @id @default(autoincrement())
+  title        String
+  kana         String
+  titleEn      String
+  jasracCode   String?
+  iswcCode     String?
+  thumbnailUrl String?
 }
