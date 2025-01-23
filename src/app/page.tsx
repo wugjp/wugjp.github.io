@@ -11,7 +11,7 @@ export default async function Home() {
           title={t.title}
           description={t.description}
           items={[
-            { icon: '🎵', name: t.songs, href: '/songs' },
+            { icon: '🎵', name: t.songs, href: '/songs', enabled: false },
             { icon: '💿', name: t.records, href: '/records', enabled: false },
             { icon: '👤', name: t.artists, href: '/artists', enabled: false },
             { icon: '🎬', name: t.youtube, href: '/youtube' },

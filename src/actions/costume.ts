@@ -1,5 +1,6 @@
 import { CacheTag } from '@/lib/cache'
 import prisma from '@/lib/prisma'
+import { CostumeType } from '@prisma/client'
 import { unstable_cache } from 'next/cache'
 
 export const getCostume = unstable_cache(
@@ -25,7 +26,7 @@ export const getCostume = unstable_cache(
 )
 
 export const listCostumes = unstable_cache(
-  async () =>
+  async (costumeType?: CostumeType) =>
     prisma.costume.findMany({
       include: {
         images: {
@@ -34,6 +35,9 @@ export const listCostumes = unstable_cache(
           },
           take: 1,
         },
+      },
+      where: {
+        costumeType,
       },
       orderBy: {
         displayOrder: 'asc',

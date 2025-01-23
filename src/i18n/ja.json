@@ -31,7 +31,9 @@
     "photoBy": "写真提供:",
     "san": "さん",
     "relatedTweets": "関連ツイート",
-    "relatedVideos": "関連動画"
+    "relatedVideos": "関連動画",
+    "liveCostumes": "ライブ衣装一覧",
+    "eventCostumes": "イベント衣装一覧"
   },
   "youtube": {
     "title": "YouTube動画一覧",

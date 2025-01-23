@@ -7,6 +7,12 @@ datasource db {
   url      = "file:./data.db"
 }
 
+enum CostumeType {
+  LIVE
+  EVENT
+  OTHERS
+}
+
 model Costume {
   id             Int            @id @default(autoincrement())
   displayOrder   Int
@@ -16,6 +22,7 @@ model Costume {
   debutEventId   Int?
   artistId       Int?
   note           String?
+  costumeType    CostumeType
   images         CostumeImage[]
 }
 

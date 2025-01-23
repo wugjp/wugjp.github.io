@@ -16,14 +16,21 @@ export const generateMetadata = async (): Promise<Metadata> => {
 }
 
 const Costumes = async () => {
-  const costumes = await listCostumes()
+  const liveCostumes = await listCostumes('LIVE')
+  const eventCostumes = await listCostumes('EVENT')
   const { costumes: t } = await getDictionary()
   return (
     <Container className='max-w-screen-lg text-center px-2 md:px-2 py-4'>
       <Breadcrumbs items={[{ name: t.title, href: '/costumes' }]} />
-      <Title title={t.title} description={t.description} />
       <div className='grid gap-16'>
-        <CostumeCollection costumes={costumes} />
+        <div>
+          <Title title={t.liveCostumes} />
+          <CostumeCollection costumes={liveCostumes} />
+        </div>
+        <div>
+          <Title title={t.eventCostumes} />
+          <CostumeCollection costumes={eventCostumes} />
+        </div>
       </div>
     </Container>
   )
