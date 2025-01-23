@@ -56,3 +56,22 @@ export const listCostumeTweets = unstable_cache(
   undefined,
   { tags: [CacheTag('Costumes')] }
 )
+
+export const listYouTubeVideosByCostume = unstable_cache(
+  async (costumeId: number) =>
+    prisma.costumeYouTubeVideo.findMany({
+      include: {
+        video: true,
+      },
+      where: {
+        costumeId,
+      },
+      orderBy: {
+        video: {
+          publishedTimestamp: 'asc',
+        },
+      },
+    }),
+  undefined,
+  { tags: [CacheTag('Costumes')] }
+)

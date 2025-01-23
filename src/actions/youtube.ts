@@ -22,7 +22,7 @@ export const listYouTubeVideos = unstable_cache(
         channelId,
       },
       orderBy: {
-        publishedTimestamp: 'desc',
+        publishedTimestamp: 'asc',
       },
       skip: offset,
       take: limit,

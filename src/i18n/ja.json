@@ -30,7 +30,8 @@
     "costumeNameType": "衣装呼称タイプ",
     "photoBy": "写真提供:",
     "san": "さん",
-    "relatedTweets": "関連ツイート"
+    "relatedTweets": "関連ツイート",
+    "relatedVideos": "関連動画"
   },
   "youtube": {
     "title": "YouTube動画一覧",

@@ -38,6 +38,13 @@ model CostumeTweet {
   tweetId   String
 }
 
+model CostumeYouTubeVideo {
+  id        Int          @id @default(autoincrement())
+  costumeId Int
+  videoId   String
+  video     YouTubeVideo @relation(fields: [videoId], references: [id], onDelete: NoAction, onUpdate: NoAction)
+}
+
 model Song {
   id           Int     @id @default(autoincrement())
   title        String
@@ -55,8 +62,9 @@ model YouTubeChannel {
 }
 
 model YouTubeVideo {
-  id                 String @id
-  publishedTimestamp Int
-  channelId          String
-  title              String
+  id                  String                @id
+  publishedTimestamp  Int
+  channelId           String
+  title               String
+  CostumeYouTubeVideo CostumeYouTubeVideo[]
 }

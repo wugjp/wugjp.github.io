@@ -5,6 +5,7 @@ import getMetadata from '@/components/common/Meta'
 import CostumeDetailImagesWrapper from '@/components/costumes/CostumeDetailImagesWrapper'
 import CostumeMetadata from '@/components/costumes/CostumeMetadata'
 import CostumeTweets from '@/components/costumes/CostumeTweets'
+import CostumeYouTubeVideos from '@/components/costumes/CostumeYouTubeVideos'
 import { isDefaultLocale } from '@/i18n/config'
 import { getDictionary } from '@/i18n/dictionaries'
 import { Urls } from '@/lib/urls'
@@ -67,6 +68,7 @@ const Costume = async ({ params }: Props) => {
             <CostumeMetadata costume={costume} />
           </div>
         </div>
+        <CostumeYouTubeVideos costumeId={costume.id} />
         <CostumeTweets costumeId={id} />
       </div>
     </Container>

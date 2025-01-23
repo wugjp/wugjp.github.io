@@ -4,7 +4,10 @@ import { google } from 'googleapis'
 
 dotenv.config()
 
-const ids: string[] = []
+// Array.from($$("#contents ytd-thumbnail > a")).map(a => a.getAttribute("href")).filter(a => a.startsWith("/watch?v=")).map(a => a.replace("/watch?v=", ""))
+const ids: string[] = [
+  // TODO: do not forget to clean up
+]
 
 async function main() {
   const chunks = []
