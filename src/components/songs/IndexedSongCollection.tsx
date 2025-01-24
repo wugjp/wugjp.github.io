@@ -1,9 +1,7 @@
+import { listSongs } from '@/actions/songs'
 import IndexHeading from '@/components/common/IndexHeading'
 import { jpIndexNavItems } from '@/components/common/IndexNav'
-import { CacheTag } from '@/lib/cache'
-import prisma from '@/lib/prisma'
 import { Song } from '@prisma/client'
-import { unstable_cache } from 'next/cache'
 import SongCollection from './SongCollection'
 
 const IndexedSongCollection = async () => {
@@ -32,16 +30,5 @@ const IndexedSongCollection = async () => {
     </div>
   )
 }
-
-const listSongs = unstable_cache(
-  async () =>
-    prisma.song.findMany({
-      orderBy: {
-        kana: 'asc',
-      },
-    }),
-  undefined,
-  { tags: [CacheTag('Songs')] }
-)
 
 export default IndexedSongCollection

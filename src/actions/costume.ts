@@ -61,3 +61,13 @@ export const listYouTubeVideosByCostume = async (costumeId: number) =>
       },
     },
   })
+
+export const listCostumeImages = async (id: number) =>
+  await prisma.costumeImage.findMany({
+    where: {
+      costumeId: id,
+    },
+    orderBy: {
+      displayOrder: 'asc',
+    },
+  })
