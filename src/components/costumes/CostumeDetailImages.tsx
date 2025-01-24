@@ -1,6 +1,7 @@
 'use client'
 
 import { useDictionary } from '@/i18n/hook'
+import { Urls } from '@/lib/urls'
 import { CostumeImage } from '@prisma/client'
 import Link from 'next/link'
 import { useState } from 'react'
@@ -16,7 +17,13 @@ const CostumeDetailImages = ({ images }: Props) => {
   return (
     <>
       <div className='border rounded'>
-        <CostumeImg imageKey={image?.imageKey} size='600' alt={image?.description || 'no image'} loading={!images} />
+        {image ? (
+          <Link href={Urls.file(encodeURIComponent(`${image.imageKey}.1024.png`))} target='_blank' className='text-primary'>
+            <CostumeImg imageKey={image?.imageKey} size='600' alt={image?.description || 'no image'} loading={!images} />
+          </Link>
+        ) : (
+          <CostumeImg imageKey={undefined} size='600' alt={'no image'} loading={!images} />
+        )}
       </div>
       {image && (
         <>
