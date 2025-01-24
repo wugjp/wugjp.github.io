@@ -1,7 +1,6 @@
 import prisma from '@/lib/prisma'
-import { unstable_cache } from 'next/cache'
 
-export const listYouTubeChannels = unstable_cache(() => prisma.youTubeChannel.findMany({}))
+export const listYouTubeChannels = () => prisma.youTubeChannel.findMany({})
 
 export const getYouTubeChannel = async (id: string) =>
   prisma.youTubeChannel.findUnique({
