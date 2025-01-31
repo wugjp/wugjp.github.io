@@ -71,3 +71,20 @@ export const listCostumeImages = async (id: number) =>
       displayOrder: 'asc',
     },
   })
+
+export const getCostumeModel = async (id: number) =>
+  prisma.costumeModel.findFirst({
+    where: {
+      id,
+    },
+  })
+
+export const listCostumeModels = async (id?: number) =>
+  prisma.costumeModel.findMany({
+    where: {
+      costumeId: id,
+    },
+    orderBy: {
+      displayOrder: id ? 'asc' : undefined,
+    },
+  })

@@ -39,6 +39,16 @@ model CostumeImage {
   @@index([costumeId], map: "costume_id")
 }
 
+model CostumeModel {
+  id           Int    @id @default(autoincrement())
+  costumeId    Int
+  displayOrder Int
+  url          String
+  creditName   String
+  creditUrl    String
+  description  String
+}
+
 model CostumeTweet {
   id        Int    @id @default(autoincrement())
   costumeId Int
